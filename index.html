@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>BestPlanner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__flex">
+          <h1 class="header__logo">
+            <a href=""><img src="./img/logo.png" alt="" /></a>
+          </h1>
+          <div class="header__icon drawer__icon">
+            <button class="header__icon-btn drawer__icon-btn">
+              <div class="header__icon-bar drawer__icon-bar"></div>
+              <div class="header__icon-bar drawer__icon-bar"></div>
+              <div class="header__icon-bar drawer__icon-bar"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="js-drawer-content" class="menu">
+      <div class="menu__content">
+        <picture class="menu__logo">
+          <source media="(min-width: 805px)" srcset="./img/logomenu.png" />
+          <img src="./img/logo.png" alt=""
+        /></picture>
+        <button class="menu__icon drawer__icon">
+          <div class="menu__icon-bar"></div>
+          <div class="menu__icon-bar"></div>
+        </button>
+        <div class="menu__container--sp">
+          <ul class="menu__nav">
+            <li class="menu__list"><a href="">プランナーを探す</a></li>
+            <li class="menu__list"><a href="">シンデレラレポ</a></li>
+            <li class="menu__list"><a href="">お気に入りレポート</a></li>
+            <li class="menu__list"><a href="">初めてご利用される方へ</a></li>
+            <li class="menu__list"><a href="">よくあるご質問</a></li>
+            <li class="menu__list"><a href="">お問い合わせ</a></li>
+          </ul>
+          <div class="menu__button">
+            <button class="menu__btn button">ログイン</button>
+          </div>
+        </div>
+        <div class="menu__container--pc">
+          <ul class="menu__nav">
+            <li class="menu__list"><a href="">プランナーを探す</a></li>
+            <li class="menu__list"><a href="">シンデレラレポ</a></li>
+            <li class="menu__list"><a href="">お気に入りレポート</a></li>
+            <div class="menu__button">
+              <button class="menu__btn button">ログイン</button>
+            </div>
+          </ul>
+          <div class="menu__border"></div>
+          <ul class="menu__nav menu__nav--second">
+            <li class="menu__list"><a href="">初めてご利用される方へ</a></li>
+            <li class="menu__list"><a href="">よくあるご質問</a></li>
+            <li class="menu__list"><a href="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="menu__deco">
+          <img src="./img/Union.svg" alt="" />
+        </div>
+        <ul class="menu__nav2">
+          <li class="menu_list2"><a href="">運営会社</a></li>
+          <li class="menu_list2"><a href="">プライバシーポリシー</a></li>
+          <li class="menu_list2"><a href="">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <div class="fv">
+        <div class="fv__box">
+          <p class="fv__sub-title">
+            <span>You can meet</span>
+            <span>the best wedding planner.</span>
+          </p>
+          <h2 class="fv__title">
+            <span class="fv__title1">誰と作るか</span>
+            <span class="fv__title2">から</span>
+            <span class="fv__title3">始める結婚式</span>
+          </h2>
+        </div>
+        <div class="fv__flex">
+          <button class="js-fv__btn fv__btn">
+            <span
+              >おすすめの<br />
+              <span>プラン</span><span>から</span><br />
+              プランナーを探す</span
+            >
+            <img src="./img/arrow.svg" alt="" />
+          </button>
+          <button class="js-fv__btn2 fv__btn fv__btn--b">
+            <span
+              >希望の<br />
+              <span>エリア</span><span>から</span><br />
+              プランナーを探す</span
+            >
+            <img src="./img/arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="fv__menu">
+          <div class="drawer__icon">
+            <button class="drawer__icon-btn">
+              <div class="drawer__icon-bar"></div>
+              <div class="drawer__icon-bar"></div>
+              <div class="drawer__icon-bar"></div>
+            </button>
+          </div>
+          <div class="fv__menu-item">
+            <div class="fv__menu-guide">
+              <img src="./img/guide.png" alt="" />
+            </div>
+            <p class="fv__menu-text">初めて<br />ご利用の方へ</p>
+          </div>
+          <div class="fv__menu-item">
+            <div class="fv__menu-login">
+              <img src="./img/login.png" alt="" />
+            </div>
+            <p class="fv__menu-text">ログイン</p>
+          </div>
+          <div class="fv__menu-item">
+            <div class="fv__menu-like">
+              <img src="./img/like.png" alt="" />
+            </div>
+            <p class="fv__menu-text">お気に入り<br />レポート</p>
+          </div>
+        </div>
+      </div>
+      <!-- プランから探す -->
+      <div id="js-drawer-background" class="drawer-background"></div>
+      <div id="js-plan-menu" class="plan-menu">
+        <div class="plan-menu__flex">
+          <div class="plan-menu__flex1">
+            <a href="" class="plan-menu__card">
+              <div class="plan-menu__image">
+                <img src="./img/plan-menu (1).png" alt="" />
+              </div>
+              <div class="plan-menu__text">国内挙式・披露宴</div>
+              <div class="plan-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="plan-menu__border"></div>
+            <a href="" class="plan-menu__card">
+              <div class="plan-menu__image">
+                <img src="./img/plan-menu (2).png" alt="" />
+              </div>
+              <div class="plan-menu__text">海外ウェディング</div>
+              <div class="plan-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="plan-menu__border"></div>
+            <a href="" class="plan-menu__card">
+              <div class="plan-menu__image">
+                <img src="./img/plan-menu (3).png" alt="" />
+              </div>
+              <div class="plan-menu__text">フォトウェディング</div>
+              <div class="plan-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="plan-menu__border plan-menu__border-pc"></div>
+          </div>
+          <div class="plan-menu__flex2">
+            <a href="" class="plan-menu__card">
+              <div class="plan-menu__image">
+                <img src="./img/plan-menu (4).png" alt="" />
+              </div>
+              <div class="plan-menu__text">家族・少人数<br />ウェディング</div>
+              <div class="plan-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="plan-menu__border"></div>
+            <a href="" class="plan-menu__card">
+              <div class="plan-menu__image">
+                <img src="./img/plan-menu (5).png" alt="" />
+              </div>
+              <div class="plan-menu__text">
+                リゾート・ビーチ<br />アウトドア<br />ウェディング
+              </div>
+              <div class="plan-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- エリアから探す -->
+      <div id="js-drawer-background2" class="drawer-background"></div>
+      <div id="js-area-menu" class="area-menu">
+        <div class="area-menu__flex">
+          <div class="area-menu__flex1">
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">北海道・東北 (15)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">関東・甲信越 (35)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="area-menu__border"></div>
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">北陸・東海 (25)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">関西・中国 (18)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+          </div>
+          <div class="area-menu__flex2">
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">四国・九州 (16)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">沖縄 (19)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+            <a href="" class="area-menu__card">
+              <div class="area-menu__text">海外 (10)</div>
+              <div class="area-menu__arrow">
+                <img src="./img/plan-menu-arrow.svg" alt="" />
+              </div>
+            </a>
+            <div class="area-menu__border"></div>
+          </div>
+        </div>
+      </div>
+      <!-- recent -->
+      <section class="recent">
+        <div class="recent__inner">
+          <h2 class="recent__head heading">
+            <span class="heading-en">Recent Planner and Reports</span>
+            <span class="heading-border"></span>
+            <span class="heading-ja">最近見たレポートとプランナー</span>
+          </h2>
+          <h3 class="recent__title title">
+            <span class="title-en">Planner</span>
+
+            <span class="title-ja">プランナー</span>
+          </h3>
+          <div class="recent_slider1">
+            <!-- Slider main container -->
+            <div id="js-recent-swiper1" class="swiper recent__swiper1">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper recent__swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide recent__swiper-slide">
+                  <div class="recent__box recent-box">
+                    <div class="recent-box__image">
+                      <img src="./img/recent1.png" alt="" />
+                    </div>
+                    <div class="recent-box__content">
+                      <p class="recent-box__name">佐々木 結</p>
+                      <p class="recent-box__companyname">
+                        オリオンウェディング
+                      </p>
+                      <div class="recent-box__flex">
+                        <p class="recent-box__tag">エリア</p>
+                        <p class="recent-box__area">
+                          <span>東京</span>
+                          <span>神奈川</span>
+                          <span>千葉</span>
+                          <span>埼玉</span>
+                          <span>長野</span>
+                          <span>愛知</span>
+                          <span>岡山</span>
+                          <span>大阪</span>
+                          <span>広島</span>
+                          <span>福岡</span>
+                          <span>沖縄</span>
+                          <span>海外</span>
+                        </p>
+                      </div>
+                      <button class="recent-box__like">
+                        <img src="./img/Star.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide recent__swiper-slide">
+                  <div class="recent__box recent-box">
+                    <div class="recent-box__image">
+                      <img src="./img/recent2.png" alt="" />
+                    </div>
+                    <div class="recent-box__content">
+                      <p class="recent-box__name">鈴木 直子</p>
+                      <p class="recent-box__companyname">Orange wedding</p>
+                      <div class="recent-box__flex">
+                        <p class="recent-box__tag">エリア</p>
+                        <p class="recent-box__area">
+                          <span>東京</span>
+                          <span>神奈川</span>
+                          <span>千葉</span>
+                          <span>埼玉</span>
+                          <span>長野</span>
+                          <span>愛知</span>
+                          <span>岡山</span>
+                          <span>大阪</span>
+                          <span>広島</span>
+                          <span>福岡</span>
+                          <span>沖縄</span>
+                          <span>海外</span>
+                        </p>
+                      </div>
+                      <button class="recent-box__like">
+                        <img src="./img/Star.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide recent__swiper-slide">
+                  <div class="recent__box recent-box">
+                    <div class="recent-box__image">
+                      <img src="./img/recent3.png" alt="" />
+                    </div>
+                    <div class="recent-box__content">
+                      <p class="recent-box__name">加藤美玲</p>
+                      <p class="recent-box__companyname">
+                        株式会社best wedding
+                      </p>
+                      <div class="recent-box__flex">
+                        <p class="recent-box__tag">エリア</p>
+                        <p class="recent-box__area">
+                          <span>東京</span>
+                          <span>神奈川</span>
+                          <span>千葉</span>
+                          <span>埼玉</span>
+                          <span>長野</span>
+                          <span>愛知</span>
+                          <span>岡山</span>
+                          <span>大阪</span>
+                          <span>広島</span>
+                          <span>福岡</span>
+                          <span>沖縄</span>
+                          <span>海外</span>
+                        </p>
+                      </div>
+                      <button class="recent-box__like">
+                        <img src="./img/Star.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div
+                id="js-recent-swiper1-prev"
+                class="swiper-button-prev recent__swiper1-button-prev"
+              ></div>
+              <div
+                id="js-recent-swiper1-next"
+                class="swiper-button-next recent__swiper1-button-next"
+              ></div>
+            </div>
+          </div>
+          <h3 class="recent__title2 title">
+            <span class="title-en">Report</span>
+            <span class="title-ja">レポート</span>
+          </h3>
+          <!-- Slider main container -->
+          <div class="recent__slider2">
+            <div id="js-recent-swiper2" class="swiper recent__swiper2">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper recent__swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide recent__swiper2-slide">
+                  <div class="recent__card recent-card">
+                    <div class="recent-card__image">
+                      <img src="./img/recent-p2.png" alt="" />
+                      <button class="recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </button>
+                    </div>
+                    <div class="recent-card__content">
+                      <p class="recent-card__title">
+                        ペットと一緒に思い出の石垣島で叶えるウェディング
+                      </p>
+                      <p class="recent-card__kind">
+                        リゾート・ビーチ・アウトドアウェディング
+                      </p>
+                      <div class="recent-card__flex">
+                        <p class="recent-card__area-tag">エリア</p>
+                        <p class="recent-card__area">軽井沢</p>
+                      </div>
+                      <p class="recent-card__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                    <div class="recent-card__readmore">Read more</div>
+                  </div>
+                </div>
+                <div class="swiper-slide recent__swiper2-slide">
+                  <div class="recent__card recent-card">
+                    <div class="recent-card__image">
+                      <img src="./img/recent-p1.png" alt="" />
+                      <button class="recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </button>
+                    </div>
+                    <div class="recent-card__content">
+                      <p class="recent-card__title">
+                        緑に囲まれたナチュラルガーデン<br
+                          class="hidden"
+                        />ウェディング
+                      </p>
+                      <p class="recent-card__kind">
+                        リゾート・ビーチ・アウトドアウェディング
+                      </p>
+                      <div class="recent-card__flex">
+                        <p class="recent-card__area-tag">エリア</p>
+                        <p class="recent-card__area">軽井沢</p>
+                      </div>
+                      <p class="recent-card__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                    <div class="recent-card__readmore">Read more</div>
+                  </div>
+                </div>
+                <div class="swiper-slide recent__swiper2-slide">
+                  <div class="recent__card recent-card">
+                    <div class="recent-card__image">
+                      <img src="./img/recent-p3.png" alt="" />
+                      <button class="recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </button>
+                    </div>
+                    <div class="recent-card__content">
+                      <p class="recent-card__title">
+                        美しい紅葉と和装フォトウェディング
+                      </p>
+                      <p class="recent-card__kind recent-card__kind--color">
+                        フォトウェディング
+                      </p>
+                      <div class="recent-card__flex">
+                        <p class="recent-card__area-tag">エリア</p>
+                        <p class="recent-card__area">関東</p>
+                      </div>
+                      <p class="recent-card__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃家族婚</span><br />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                    <div class="recent-card__readmore">Read more</div>
+                  </div>
+                </div>
+                <div class="swiper-slide recent__swiper2-slide">
+                  <div class="recent__card recent-card">
+                    <div class="recent-card__image">
+                      <img src="./img/recent-p4.png" alt="" />
+                      <button class="recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </button>
+                    </div>
+                    <div class="recent-card__content">
+                      <p class="recent-card__title">
+                        思い出の海辺で二人だけのウェディング
+                      </p>
+                      <p class="recent-card__kind recent-card__kind--color">
+                        フォトウェディング
+                      </p>
+                      <div class="recent-card__flex">
+                        <p class="recent-card__area-tag">エリア</p>
+                        <p class="recent-card__area">関東</p>
+                      </div>
+                      <p class="recent-card__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃家族婚</span><br />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                    <div class="recent-card__readmore">Read more</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div
+                id="js-recent-swiper2-prev"
+                class="swiper-button-prev recent__swiper2-button-prev"
+              ></div>
+              <div
+                id="js-recent-swiper2-next"
+                class="swiper-button-next recent__swiper2-button-next"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about -->
+      <section class="about">
+        <picture class="about__deco">
+          <source media="(min-width: 805px)" srcset="./img/logo_21.png" />
+          <img src="./img/logo_22.png" alt="" />
+        </picture>
+        <h2 class="about__head heading">
+          <span class="heading-en">What’s Best Planner ?</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">ベストプランナーとは？</span>
+        </h2>
+        <div class="about__content">
+          <p class="about__title">
+            <span>結</span>婚式を創るのはヒト。<br />ふたりの理想の結婚式を<br
+              class="hidden-md"
+            />
+            一緒に創ってくれる<br />ヒトから探しませんか。
+          </p>
+          <p class="about__text">
+            ふたりの理想を叶えてくれるプランナーを<br class="hidden" />
+            自分達の目で見てお願いしたい。<br />海外では当たり前のことが、<br
+              class="hidden-md"
+            />
+            日本では式場からが基本になっています。
+          </p>
+          <p class="about__text">
+            ふたりの希望に寄り添い、<br
+              class="hidden-md"
+            />しっかり受け止めて、<br />
+            親身に叶えようとしてくれる<br
+              class="hidden-md"
+            />プランナーがいます。
+          </p>
+          <p class="about__text">
+            そして、<br />「自分たちにとって最高の結婚式だった！」<br />「この方にお願いして本当に良かった！」<br />
+            こんな声を増やしていきたいと思っています。
+          </p>
+        </div>
+        <div class="about_box">
+          <p class="about__howto">初めてご利用される方へ</p>
+          <button class="about__btn">ベストプランナーの使い方をみる</button>
+        </div>
+        <div class="about__slider">
+          <!-- Slider main container -->
+          <div id="js-about-swiper" class="swiper about__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper about__swiper">
+              <!-- Slides -->
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about1.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about3.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about4.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about5.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about1.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about3.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about4.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__image">
+                  <img src="./img/about5.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="plan">
+        <h2 class="plan__head heading">
+          <span class="heading-en">Reccomend Plan</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">おすすめのプランからプランナーを探す</span>
+        </h2>
+        <div class="plan__inner">
+          <div class="plan__content">
+            <div class="plan__box plan-box">
+              <div class="plan-box__image">
+                <img src="./img/plan1.png" alt="" />
+              </div>
+              <div class="plan-box__meassage">
+                <div class="plan-box__text">国内<br />挙式・披露宴</div>
+                <div class="plan-box__arrow"></div>
+              </div>
+            </div>
+            <div class="plan__box plan-box">
+              <div class="plan-box__image">
+                <img src="./img/plan2.png" alt="" />
+              </div>
+              <div class="plan-box__meassage">
+                <div class="plan-box__text">海外<br />ウェディング</div>
+                <div class="plan-box__arrow"></div>
+              </div>
+            </div>
+            <div class="plan__box plan-box">
+              <div class="plan-box__image">
+                <img src="./img/plan3.png" alt="" />
+              </div>
+              <div class="plan-box__meassage">
+                <div class="plan-box__text">フォト<br />ウェディング</div>
+                <div class="plan-box__arrow"></div>
+              </div>
+            </div>
+            <div class="plan__box plan-box">
+              <div class="plan-box__image">
+                <img src="./img/plan4.png" alt="" />
+              </div>
+              <div class="plan-box__meassage">
+                <div class="plan-box__text">家族・少人数<br />ウェディング</div>
+                <div class="plan-box__arrow"></div>
+              </div>
+            </div>
+            <div class="plan__box plan-box">
+              <div class="plan-box__image">
+                <img src="./img/plan5.png" alt="" />
+              </div>
+              <div class="plan-box__meassage">
+                <div class="plan-box__text">
+                  リゾート・ビーチ<br />アウトドア<br />ウェディング
+                </div>
+                <div class="plan-box__arrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- reports -->
+      <section class="reports">
+        <h2 class="reports__head heading">
+          <span class="heading-en">Populer Reports</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">人気のウェディングレポート</span>
+        </h2>
+        <h3 class="reports__title title">
+          <span class="title-en">Ranking</span>
+
+          <span class="title-ja">人気レポートランキング</span>
+        </h3>
+        <!-- Slider main container -->
+        <div class="reports__slider reports-populer__slider">
+          <div id="js-reports-swiper" class="swiper reports__swiper">
+            <!-- Additional required wrapper -->
+            <div
+              class="swiper-wrapper reports__swiper-wrapper reports-populer-wrapper"
+            >
+              <!-- Slides -->
+              <div
+                class="swiper-slide reports__swiper-slide reports-populer-slide"
+              >
+                <div
+                  class="reports__card reports-card reports-populer-card reports-populer-card--first"
+                >
+                  <p class="reports-card__ribbon">No.<br /><span>01</span></p>
+                  <button
+                    class="reports-populer-card__like reports-card__like recent-card__like"
+                  >
+                    <img src="./img/heart.png" alt="" />
+                  </button>
+                  <div class="reports-card__block reports-populer__block">
+                    <picture class="reports-card__image reports-populer__image">
+                      <source
+                        media="(min-width: 1085px)"
+                        srcset="./img/reports1-pc.png"
+                      />
+                      <img src="./img/reports1.png" alt="" />
+                    </picture>
+                    <!-- message -->
+                    <div class="reports__message reports-message">
+                      <p class="reports-message__title">
+                        ペットと一緒に思い出の石垣島で叶えるウェディング
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <p class="reports-message__kind">
+                        リゾート・ビーチ・アウトドアウェディング
+                      </p>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">沖縄</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-populer__border"></div>
+                  <div class="reports-box__flex">
+                    <p class="reports-box__title">
+                      出会ってからずっと一緒だった愛犬と初めての旅行で訪れた石垣島でのウェディング。
+                    </p>
+                    <p class="reports-box__text">
+                      レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。<br />
+                      レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート…
+                    </p>
+                  </div>
+                  <!-- planner -->
+                  <!-- <div class="reports-box__unit"> -->
+                  <div class="reports__planner reports-planner">
+                    <div class="reports-planner__image">
+                      <img src="./img/recent3.png" alt="" />
+                    </div>
+                    <div class="reports-planner__content">
+                      <p class="reports-planner__role">担当プランナー</p>
+                      <p class="reports-planner__name">鈴木 咲</p>
+                      <p class="reports-planner__companyname">
+                        株式会社p-wedding
+                      </p>
+                    </div>
+                  </div>
+                  <button class="reports-card__readmore reports__readmore">
+                    Read more
+                  </button>
+                  <!-- </div> -->
+                </div>
+              </div>
+              <!-- slide -->
+              <div
+                class="swiper-slide reports__swiper-slide reports-populer-slide"
+              >
+                <div class="reports__card reports-card reports-populer-card">
+                  <p class="reports-card__ribbon reports-card__ribbon--second">
+                    No.<br /><span>02</span>
+                  </p>
+                  <button
+                    class="reports-populer-card__like reports-card__like recent-card__like"
+                  >
+                    <img src="./img/heart.png" alt="" />
+                  </button>
+                  <div class="reports-card__block reports-populer__block">
+                    <picture class="reports-card__image reports-populer__image">
+                      <source
+                        media="(min-width: 1085px)"
+                        srcset="./img/reports2-pc.png"
+                      />
+                      <img src="./img/reports2.png" alt="" />
+                    </picture>
+
+                    <!-- messsage -->
+                    <div class="reports__message reports-message">
+                      <p class="reports-message__title">
+                        大好きなペットと一緒に<br />
+                        ガーデンウェディング
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <p
+                        class="reports-message__kind reports-message__kind--second"
+                      >
+                        国内挙式・披露宴
+                      </p>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">軽井沢</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-populer__border"></div>
+                  <div class="reports-box__flex">
+                    <p class="reports-box__title">
+                      緑に囲まれたガーデンで出会ってからずっと一緒だった愛犬と叶えたウェディングパーティ。
+                    </p>
+                    <p class="reports-box__text">
+                      レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。…
+                    </p>
+                  </div>
+                  <div class="reports__planner reports-planner">
+                    <div class="reports-planner__image">
+                      <img src="./img/about3.png" alt="" />
+                    </div>
+                    <div class="reports-planner__content">
+                      <p class="reports-planner__role">担当プランナー</p>
+                      <p class="reports-planner__name">鈴木 直子</p>
+                      <p class="reports-planner__companyname">
+                        株式会社Orange wedding
+                      </p>
+                    </div>
+                  </div>
+                  <button class="reports-card__readmore reports__readmore">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide reports__swiper-slide reports-populer-slide"
+              >
+                <div class="reports__card reports-card reports-populer-card">
+                  <p class="reports-card__ribbon reports-card__ribbon--third">
+                    No.<br /><span>03</span>
+                  </p>
+                  <button
+                    class="reports-populer-card__like reports-card__like recent-card__like"
+                  >
+                    <img src="./img/heart.png" alt="" />
+                  </button>
+                  <div class="reports-card__block reports-populer__block">
+                    <picture class="reports-card__image reports-populer__image">
+                      <source
+                        media="(min-width: 1085px)"
+                        srcset="./img/reports3-pc.png"
+                      />
+                      <img src="./img/reports3.png" alt="" />
+                    </picture>
+                    <!-- message -->
+                    <div class="reports__message reports-message">
+                      <p class="reports-message__title">
+                        最高のロケーションで<br />フォトウェディング
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <p
+                        class="reports-message__kind reports-message__kind--third"
+                      >
+                        フォトウェディング
+                      </p>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">軽井沢</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-populer__border"></div>
+                  <div class="reports-box__flex">
+                    <p class="reports-box__title">
+                      大好きな地元の夕暮れで幻想的なウェディングフォト。
+                    </p>
+                    <p class="reports-box__text">
+                      レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。レポート本文が入ります。…
+                    </p>
+                  </div>
+                  <div class="reports__planner reports-planner">
+                    <div class="reports-planner__image">
+                      <img src="./img/reports-planner3.png" alt="" />
+                    </div>
+                    <div class="reports-planner__content">
+                      <p class="reports-planner__role">担当プランナー</p>
+                      <p class="reports-planner__name">加藤 結</p>
+                      <p class="reports-planner__companyname">honey wedding</p>
+                    </div>
+                  </div>
+                  <button class="reports-card__readmore reports__readmore">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div
+              id="js-reports-swiper-prev"
+              class="swiper-button-prev reports__swiper-prev reports__swiper-button-prev"
+            ></div>
+            <div
+              id="js-reports-swiper-next"
+              class="swiper-button-next reports__swiper-next reports__swiper-button-next"
+            ></div>
+          </div>
+        </div>
+        <div class="reports__button">
+          <button class="reports__btn button">
+            人気レポートランキングを<br class="hidden-md" />
+            もっとみる
+          </button>
+        </div>
+        <!-- プラン別人気レポート -->
+        <div class="reports__plan">
+          <div class="reports-plan__inner">
+            <h3 class="reports-plan__head title">
+              <span class="title-en">Reports By Plan</span>
+              <span class="title-ja">プラン別人気レポート</span>
+            </h3>
+            <div class="reports-plan__contents">
+              <div class="reports-plan__content">
+                <h3 class="reports-plan__title">国内挙式・披露宴</h3>
+                <div class="reports-plan__card reports-card">
+                  <div class="reports-card__block">
+                    <picture class="reports-plan__image reports-card__image">
+                      <source
+                        media="(min-width: 805px)"
+                        srcset="./img/reports-plan1.png"
+                      />
+                      <img src="./img/reports-plan.png" alt="" />
+                      <div class="reports-card__like recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </div>
+                    </picture>
+
+                    <!-- message -->
+                    <div class="reports-plan__message reports-message">
+                      <p
+                        class="reports-plan-message__title reports-message__title"
+                      >
+                        100名のゲストに囲まれた<br />
+                        2年越しの結婚式
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">関東</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-plan__planner reports-planner">
+                    <div
+                      class="reports-plan-planner__image reports-planner__image"
+                    >
+                      <img src="./img/recent2.png" alt="" />
+                    </div>
+                    <div
+                      class="reports-plan-planner__content reports-planner__content"
+                    >
+                      <p
+                        class="reports-plan-planner__role reports-planner__role"
+                      >
+                        担当プランナー
+                      </p>
+                      <p
+                        class="reports-plan-planner__name reports-planner__name"
+                      >
+                        加藤 美玲
+                      </p>
+                      <p
+                        class="reports-plan-planner__companyname reports-planner__companyname"
+                      >
+                        株式会社Orange wedding
+                      </p>
+                    </div>
+                  </div>
+                  <button class="reports-plan__readmore reports__readmore">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <div class="reports-plan__content">
+                <h3 class="reports-plan__title reports-plan__title--second">
+                  フォトウェディング
+                </h3>
+                <div class="reports-plan__card reports-card">
+                  <div class="reports-plan__block reports-card__block">
+                    <picture class="reports-plan__image reports-card__image">
+                      <source
+                        media="(min-width: 805px)"
+                        srcset="./img/reports-plan2.png"
+                      />
+                      <img src="./img/recent-p3.png" alt="" />
+                      <div class="reports-card__like recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </div>
+                    </picture>
+                    <!-- message -->
+                    <div class="reports-plan__message reports-message">
+                      <p
+                        class="reports-plan-message__title reports-message__title"
+                      >
+                        ふたりの地元の豊川稲荷で<br />
+                        フォトウェディング
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">東海</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-plan__planner reports-planner">
+                    <div
+                      class="reports-plan-planner__image reports-planner__image"
+                    >
+                      <img src="./img/recent3.png" alt="" />
+                    </div>
+                    <div
+                      class="reports-plan-planner__content reports-planner__content"
+                    >
+                      <p
+                        class="reports-plan-planner__role reports-planner__role"
+                      >
+                        担当プランナー
+                      </p>
+                      <p
+                        class="reports-plan-planner__name reports-planner__name"
+                      >
+                        佐々木 結
+                      </p>
+                      <p
+                        class="reports-plan-planner__companyname reports-planner__companyname"
+                      >
+                        オリオンウェディング
+                      </p>
+                    </div>
+                  </div>
+                  <button class="reports-plan__readmore reports__readmore">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <div class="reports-plan__content">
+                <h3 class="reports-plan__title reports-plan__title--third">
+                  リゾート・アウトドア・<br />ビーチウェディング
+                </h3>
+                <div
+                  class="reports-plan__card reports-plan__card--third reports-card"
+                >
+                  <div class="reports-plan__block reports-card__block">
+                    <picture class="reports-plan__image reports-card__image">
+                      <source
+                        media="(min-width: 805px)"
+                        srcset="./img/reports-plan3.png"
+                      />
+                      <img src="./img/reports1.png" alt="" />
+                      <div class="reports-card__like recent-card__like">
+                        <img src="./img/heart.png" alt="" />
+                      </div>
+                    </picture>
+                    <div class="reports-plan__message reports-message">
+                      <p
+                        class="reports-plan-message__title reports-message__title"
+                      >
+                        唯一無二の水中ウェディング<br />
+                        幻想的な沖縄の海で
+                      </p>
+                      <div class="reports-message__border"></div>
+                      <div class="reports-message__flex">
+                        <p class="reports-message__area-tag">エリア</p>
+                        <p class="reports-message__area">沖縄</p>
+                      </div>
+                      <p class="reports-message__tag">
+                        <span>＃国内</span>
+                        <span>＃フォトウェディング</span
+                        ><br class="hidden-md" />
+                        <span>＃軽井沢</span><br class="hidden" />
+                        <span>＃家族婚</span><br class="hidden-md" />
+                        <span>＃アウトドアウェディング</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reports-plan__planner reports-planner">
+                    <div
+                      class="reports-plan-planner__image reports-planner__image"
+                    >
+                      <img src="./img/recent1.png" alt="" />
+                    </div>
+                    <div
+                      class="reports-plan-planner__content reports-planner__content"
+                    >
+                      <p
+                        class="reports-plan-planner__role reports-planner__role"
+                      >
+                        担当プランナー
+                      </p>
+                      <p
+                        class="reports-plan-planner__name reports-planner__name"
+                      >
+                        鈴木 咲
+                      </p>
+                      <p
+                        class="reports-plan-planner__companyname reports-planner__companyname"
+                      >
+                        株式会社p-wedding
+                      </p>
+                    </div>
+                  </div>
+                  <button class="reports-plan__readmore reports__readmore">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <div class="reports-plan__button">
+                <button class="reports__btn button">
+                  プラン別人気レポートをもっとみる
+                </button>
+              </div>
+            </div>
+            <div class="reports-plan__button--md">
+              <button class="reports__btn button">
+                プラン別人気レポートをもっとみる
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 新着レポート -->
+        <div class="reports-news">
+          <h3 class="reports-news__head title">
+            <span class="title-en">New Reports</span>
+            <span class="title-ja">新着のレポート</span>
+          </h3>
+          <div class="reports-news__inner">
+            <!-- Slider main container -->
+            <div class="reports-news__slider">
+              <div
+                id="js-reports-news-swiper"
+                class="swiper reports-news__swiper"
+              >
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper reports-news__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide reports-news__slide">
+                    <div class="reports-news__card reports-card">
+                      <div class="reports-card__block">
+                        <div class="reports-card__image">
+                          <img src="./img/news1.png" alt="" />
+                          <div class="reports-card__like recent-card__like">
+                            <img src="./img/heart.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- message -->
+                        <div class="reports__message reports-message">
+                          <p class="reports-message__title">
+                            ドレスコードなしの<br />
+                            カジュアルウェディング
+                          </p>
+                          <div class="reports-message__border"></div>
+                          <div class="reports-message__flex">
+                            <p class="reports-message__area-tag">エリア</p>
+                            <p class="reports-message__area">関東</p>
+                          </div>
+                          <p class="reports-message__tag">
+                            <span>＃国内</span>
+                            <span>＃フォトウェディング</span
+                            ><br class="hidden-md" />
+                            <span>＃軽井沢</span><br class="hidden" />
+                            <span>＃家族婚</span><br class="hidden-md" />
+                            <span>＃アウトドアウェディング</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- planner -->
+                      <div class="reports-box__unit">
+                        <div class="reports__planner reports-planner">
+                          <div class="reports-planner__image">
+                            <img src="./img/recent3.png" alt="" />
+                          </div>
+                          <div class="reports-planner__content">
+                            <p class="reports-planner__role">担当プランナー</p>
+                            <p class="reports-planner__name">加藤 美玲</p>
+                            <p class="reports-planner__companyname">
+                              株式会社Orange wedding
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- slide -->
+                  <div class="swiper-slide reports-news__slide">
+                    <div class="reports-news__card reports-card">
+                      <div class="reports-card__block">
+                        <div class="reports-card__image">
+                          <img src="./img/recent-p3.png" alt="" />
+                          <div class="reports-card__like recent-card__like">
+                            <img src="./img/heart.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- message -->
+                        <div class="reports__message reports-message">
+                          <p class="reports-message__title">
+                            ふたりの地元の豊川稲荷で<br />
+                            フォトウェディング
+                          </p>
+                          <div class="reports-message__border"></div>
+                          <div class="reports-message__flex">
+                            <p class="reports-message__area-tag">エリア</p>
+                            <p class="reports-message__area">東海</p>
+                          </div>
+                          <p class="reports-message__tag">
+                            <span>＃国内</span>
+                            <span>＃フォトウェディング</span
+                            ><br class="hidden-md" />
+                            <span>＃軽井沢</span><br class="hidden" />
+                            <span>＃家族婚</span><br class="hidden-md" />
+                            <span>＃ロケーション</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- planner -->
+                      <div class="reports-box__unit">
+                        <div class="reports__planner reports-planner">
+                          <div class="reports-planner__image">
+                            <img src="./img/about3.png" alt="" />
+                          </div>
+                          <div class="reports-planner__content">
+                            <p class="reports-planner__role">担当プランナー</p>
+                            <p class="reports-planner__name">鈴木 直子</p>
+                            <p class="reports-planner__companyname">
+                              株式会社Orange wedding
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                  <!-- slide -->
+                  <div class="swiper-slide reports-news__slide">
+                    <div class="reports-news__card reports-card">
+                      <div class="reports-card__block">
+                        <div class="reports-card__image">
+                          <img src="./img/reports1.png" alt="" />
+                          <div class="reports-card__like recent-card__like">
+                            <img src="./img/heart.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- message -->
+                        <div class="reports__message reports-message">
+                          <p class="reports-message__title">
+                            唯一無二の水中ウェディング<br />
+                            幻想的な沖縄の海で
+                          </p>
+                          <div class="reports-message__border"></div>
+                          <div class="reports-message__flex">
+                            <p class="reports-message__area-tag">エリア</p>
+                            <p class="reports-message__area">沖縄</p>
+                          </div>
+                          <p class="reports-message__tag">
+                            <span>＃国内</span>
+                            <span>＃フォトウェディング</span
+                            ><br class="hidden-md" />
+                            <span>＃軽井沢</span><br class="hidden" />
+                            <span>＃家族婚</span><br class="hidden-md" />
+                            <span>＃リゾートウェディング</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- planner -->
+                      <div class="reports-box__unit">
+                        <div class="reports__planner reports-planner">
+                          <div class="reports-planner__image">
+                            <img src="./img/about3.png" alt="" />
+                          </div>
+                          <div class="reports-planner__content">
+                            <p class="reports-planner__role">担当プランナー</p>
+                            <p class="reports-planner__name">鈴木 直子</p>
+                            <p class="reports-planner__companyname">
+                              株式会社Orange wedding
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                  <!-- slide -->
+                  <div class="swiper-slide reports-news__slide">
+                    <div class="reports-news__card reports-card">
+                      <div class="reports-card__block">
+                        <div class="reports-card__image">
+                          <img src="./img/reports1.png" alt="" />
+                          <div class="reports-card__like recent-card__like">
+                            <img src="./img/heart.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- message -->
+                        <div class="reports__message reports-message">
+                          <p class="reports-message__title">
+                            100名のゲストに囲まれた<br />
+                            2年越しの結婚式
+                          </p>
+                          <div class="reports-message__border"></div>
+                          <div class="reports-message__flex">
+                            <p class="reports-message__area-tag">エリア</p>
+                            <p class="reports-message__area">関東</p>
+                          </div>
+                          <p class="reports-message__tag">
+                            <span>＃国内</span>
+                            <span>＃フォトウェディング</span
+                            ><br class="hidden-md" />
+                            <span>＃前撮り</span><br class="hidden" />
+                            <span>＃和婚</span><br class="hidden-md" />
+                            <span>＃前撮り</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- planner -->
+                      <div class="reports-box__unit">
+                        <div class="reports__planner reports-planner">
+                          <div class="reports-planner__image">
+                            <img src="./img/recent3.png" alt="" />
+                          </div>
+                          <div class="reports-planner__content">
+                            <p class="reports-planner__role">担当プランナー</p>
+                            <p class="reports-planner__name">尾崎 舞</p>
+                            <p class="reports-planner__companyname">
+                              株式会社best wedding
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div
+                  id="js-reports-news-swiper-prev"
+                  class="swiper-button-prev reports__swiper-prev reports-news__prev"
+                ></div>
+                <div
+                  id="js-reports-news-swiper-next"
+                  class="swiper-button-next reports__swiper-next reports-news__next"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="reports-news__button">
+            <button class="reports__btn button">
+              新着レポートを<br class="hidden-md" />
+              もっとみる
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- 人気プランナーランキング -->
+      <section class="plannerranking">
+        <div class="plannerranking__inner">
+          <h2 class="plannerranking__head heading">
+            <span class="heading-en">Reccomend Planner</span>
+            <span class="heading-border"></span>
+            <span class="heading-ja">人気のウェディングプランナー</span>
+          </h2>
+          <h3 class="plannerranking__title title">
+            <span class="title-en">Ranking</span>
+            <span class="title-ja">人気プランナーランキング</span>
+          </h3>
+          <!-- Slider main container -->
+          <div class="plannerranking-slider">
+            <div
+              id="js-plannerranking-swiper"
+              class="swiper plannerranking-swiper"
+            >
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper plannerranking-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide plannerranking-slide">
+                  <div class="plannerranking__card reports-card">
+                    <p class="plannerranking__ribbon reports-card__ribbon">
+                      No.<br /><span>01</span>
+                    </p>
+                    <div class="plannerranking__contents">
+                      <div class="plannerranking__content">
+                        <div class="plannerranking__left">
+                          <div class="plannerranking__image">
+                            <img src="./img/plannerranking1.jpg" alt="" />
+                            <div
+                              class="plannerranking__like reports-card__like recent-box__like"
+                            >
+                              <img src="./img/Star.png" alt="" />
+                            </div>
+                          </div>
+                          <p class="plannerranking__name">鈴木 直子</p>
+                          <p class="plannerranking__companyname">
+                            株式会社mirage
+                          </p>
+                        </div>
+                        <div class="plannerranking__right">
+                          <p class="plannerranking__right-title">
+                            心に残る<br />
+                            ウェディングを
+                          </p>
+                          <div class="plannerranking__area-tagbox">
+                            <p
+                              class="plannerranking__area-tag reports-message__area-tag"
+                            >
+                              エリア
+                            </p>
+                            <p
+                              class="plannerranking__area reports-message__area"
+                            >
+                              <span>東京</span>
+                              <span>神奈川</span>
+                              <span>千葉</span>
+                              <span>埼玉</span><br class="hidden-md" />
+                              <span>長野</span>
+                              <span>愛知</span><br class="hidden" />
+                              <span>岡山</span>
+                              <span>大阪</span><br class="hidden-md" />
+                              <span>広島</span>
+                              <span>福岡</span>
+                              <span>沖縄</span>
+                              <span>海外</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <p
+                        class="plannerranking-message__tag reports-message__tag"
+                      >
+                        <span>＃国内</span>
+                        <span>＃海外</span>
+                        <span>＃レストラン</span>
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃リゾートウェディング</span><br class="hidden" />
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃アウトドア</span>
+                      </p>
+                      <div class="plannerranking__point">
+                        <div class="plannerranking__point-title">Point</div>
+                        <ul class="plannerranking__point-lists">
+                          <li class="plannerranking__point-list">
+                            オンライン相談OK
+                          </li>
+                          <li class="plannerranking__point-list">
+                            担当挙式数200組以上
+                          </li>
+                          <li class="plannerranking__point-list">
+                            アウトドアウェディングが得意
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="plannerranking__garally">
+                      <div class="plannerranking__garally-title">
+                        Photo Garally
+                      </div>
+                      <div class="plannerranking__garally-image">
+                        <img src="./img/garally1.png" alt="" />
+                        <img src="./img/garally2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide plannerranking-slide">
+                  <div class="plannerranking__card reports-card">
+                    <p
+                      class="plannerranking__ribbon reports-card__ribbon reports-card__ribbon--second"
+                    >
+                      No.<br /><span>02</span>
+                    </p>
+                    <div class="plannerranking__contents">
+                      <div class="plannerranking__content">
+                        <div class="plannerranking__left">
+                          <div class="plannerranking__image">
+                            <img src="./img/plannerranking2.jpg" alt="" />
+                            <div
+                              class="plannerranking__like reports-card__like recent-box__like"
+                            >
+                              <img src="./img/Star.png" alt="" />
+                            </div>
+                          </div>
+                          <p class="plannerranking__name">加藤 美玲</p>
+                          <p class="plannerranking__companyname">
+                            株式会社Pwedding
+                          </p>
+                        </div>
+                        <div class="plannerranking__right">
+                          <p class="plannerranking__right-title">
+                            自分たちらしい結婚式を自分たちの手で
+                          </p>
+                          <div class="plannerranking__area-tagbox">
+                            <p
+                              class="plannerranking__area-tag reports-message__area-tag"
+                            >
+                              エリア
+                            </p>
+                            <p
+                              class="plannerranking__area reports-message__area"
+                            >
+                              <span>東京</span>
+                              <span>神奈川</span>
+                              <span>千葉</span><br class="hidden-md" />
+                              <span>長野</span>
+                              <span>愛知</span><br class="hidden" />
+                              <span>岡山</span>
+                              <span>大阪</span><br class="hidden-md" />
+                              <span>広島</span>
+                              <span>福岡</span>
+                              <span>沖縄</span>
+                              <span>海外</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <p
+                        class="plannerranking-message__tag reports-message__tag"
+                      >
+                        <span>＃国内</span>
+                        <span>＃海外</span>
+                        <span>＃レストラン</span>
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃リゾートウェディング</span><br class="hidden" />
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃アウトドア</span>
+                      </p>
+                      <div class="plannerranking__point">
+                        <div class="plannerranking__point-title">Point</div>
+                        <ul class="plannerranking__point-lists">
+                          <li class="plannerranking__point-list">
+                            司会もできる
+                          </li>
+                          <li class="plannerranking__point-list">
+                            打ち合わせ回数制限なし
+                          </li>
+                          <li class="plannerranking__point-list">海外挙式OK</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="plannerranking__garally">
+                      <div class="plannerranking__garally-title">
+                        Photo Garally
+                      </div>
+                      <div class="plannerranking__garally-image">
+                        <img src="./img/garally3.png" alt="" />
+                        <img src="./img/garally4.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide plannerranking-slide">
+                  <div class="plannerranking__card reports-card">
+                    <p
+                      class="plannerranking__ribbon reports-card__ribbon reports-card__ribbon--third"
+                    >
+                      No.<br /><span>03</span>
+                    </p>
+                    <div class="plannerranking__contents">
+                      <div class="plannerranking__content">
+                        <div class="plannerranking__left">
+                          <div class="plannerranking__image">
+                            <img src="./img/plannerranking3.jpg" alt="" />
+                            <div
+                              class="plannerranking__like reports-card__like recent-box__like"
+                            >
+                              <img src="./img/Star.png" alt="" />
+                            </div>
+                          </div>
+                          <p class="plannerranking__name">尾崎 舞</p>
+                          <p class="plannerranking__companyname">
+                            hoihoi produce
+                          </p>
+                        </div>
+                        <div class="plannerranking__right">
+                          <p class="plannerranking__right-title">
+                            最高のプランを<br />
+                            一緒に作りましょう
+                          </p>
+                          <div class="plannerranking__area-tagbox">
+                            <p
+                              class="plannerranking__area-tag reports-message__area-tag"
+                            >
+                              エリア
+                            </p>
+                            <p class="reports-message__area">
+                              <span>東京</span>
+                              <span>神奈川</span>
+                              <span>千葉</span>
+                              <span>埼玉</span><br class="hidden-md" />
+                              <span>長野</span>
+                              <span>愛知</span><br class="hidden" />
+                              <span>岡山</span>
+                              <span>大阪</span><br class="hidden-md" />
+                              <span>広島</span>
+                              <span>福岡</span>
+                              <span>沖縄</span>
+                              <span>海外</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <p
+                        class="plannerranking-message__tag reports-message__tag"
+                      >
+                        <span>＃国内</span>
+                        <span>＃海外</span>
+                        <span>＃レストラン</span>
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃リゾートウェディング</span><br class="hidden" />
+                        <span>＃海外</span><br class="hidden-md" />
+                        <span>＃アウトドア</span>
+                      </p>
+                      <div class="plannerranking__point">
+                        <div class="plannerranking__point-title">Point</div>
+                        <ul class="plannerranking__point-lists">
+                          <li class="plannerranking__point-list">
+                            司会もできる
+                          </li>
+                          <li class="plannerranking__point-list">
+                            打ち合わせ回数制限なし
+                          </li>
+                          <li class="plannerranking__point-list">海外挙式OK</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="plannerranking__garally">
+                      <div class="plannerranking__garally-title">
+                        Photo Garally
+                      </div>
+                      <div class="plannerranking__garally-image">
+                        <img src="./img/garally5.png" alt="" />
+                        <img src="./img/garally6.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div
+                id="js-plannerranking-prev"
+                class="swiper-button-prev reports__swiper-prev"
+              ></div>
+              <div
+                id="js-plannerranking-next"
+                class="swiper-button-next reports__swiper-next"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="plannerranking-new">
+          <h3 class="plannerranking__title plannerranking-new__title title">
+            <span class="title-en">New in</span>
+            <span class="title-ja">新着のプランナー</span>
+          </h3>
+          <div class="plannerranking-new__container">
+            <div class="plannerranking-new__slider">
+              <!-- Slider main container -->
+              <div
+                id="js-plannerranking-new-swiper"
+                class="plannerranking-new-swiper swiper"
+              >
+                <!-- Additional required wrapper -->
+                <div class="plannerranking-new-wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="plannerranking-new-slide swiper-slide">
+                    <div class="plannerranking-new__card reports-card">
+                      <div class="plannerranking__contents">
+                        <div
+                          class="plannerranking-new__content plannerranking__content"
+                        >
+                          <div
+                            class="plannerranking-new__left plannerranking__left"
+                          >
+                            <div
+                              class="plannerranking-new__image plannerranking__image"
+                            >
+                              <img src="./img/plannerranking3.jpg" alt="" />
+                              <div
+                                class="plannerranking-new__like plannerranking__like reports-card__like recent-box__like"
+                              >
+                                <img src="./img/Star.png" alt="" />
+                              </div>
+                            </div>
+                            <p
+                              class="plannerranking-new__name plannerranking__name"
+                            >
+                              鈴木 直子
+                            </p>
+                            <p class="plannerranking__companyname">
+                              株式会社mirage
+                            </p>
+                          </div>
+                          <div class="plannerranking__right">
+                            <p
+                              class="plannerranking-new__right-title plannerranking__right-title"
+                            >
+                              心に残る<br />
+                              ウェディングを
+                            </p>
+                            <div class="plannerranking__area-tagbox">
+                              <p
+                                class="plannerranking__area-tag reports-message__area-tag"
+                              >
+                                エリア
+                              </p>
+                              <p
+                                class="plannerranking-new__area reports-message__area"
+                              >
+                                <span>東京</span>
+                                <span>神奈川</span>
+                                <span>千葉</span>
+                                <span>埼玉</span><br class="hidden-md" />
+                                <span>長野</span>
+                                <span>愛知</span><br class="hidden" />
+                                <span>岡山</span>
+                                <span>大阪</span><br class="hidden-md" />
+                                <span>広島</span>
+                                <span>福岡</span>
+                                <span>沖縄</span>
+                                <span>海外</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plannerranking-new__tag reports-message__tag">
+                          <span>＃国内</span>
+                          <span>＃海外</span>
+                          <span>＃レストラン</span><br />
+                          <span>＃海外</span>
+                          <span>＃リゾートウェディング</span><br />
+                          <span>＃海外</span>
+                          <span>＃アウトドア</span>
+                        </p>
+                        <div
+                          class="plannerranking-new__point plannerranking__point"
+                        >
+                          <div class="plannerranking__point-title">Point</div>
+                          <ul class="plannerranking__point-lists">
+                            <li class="plannerranking__point-list">
+                              オンライン相談OK
+                            </li>
+                            <li class="plannerranking__point-list">
+                              担当挙式数200組以上
+                            </li>
+                            <li class="plannerranking__point-list">
+                              アウトドアウェディングが得意
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slides -->
+                  <div class="plannerranking-new-slide swiper-slide">
+                    <div class="plannerranking-new__card reports-card">
+                      <div class="plannerranking__contents">
+                        <div class="plannerranking__content">
+                          <div class="plannerranking__left">
+                            <div class="plannerranking__image">
+                              <img src="./img/plannerranking1.jpg" alt="" />
+                              <div
+                                class="plannerranking-new__like plannerranking__like reports-card__like recent-box__like"
+                              >
+                                <img src="./img/Star.png" alt="" />
+                              </div>
+                            </div>
+                            <p
+                              class="plannerranking-new__name plannerranking__name"
+                            >
+                              酒井 菜々子
+                            </p>
+                            <p class="plannerranking__companyname">
+                              marry-wedding
+                            </p>
+                          </div>
+                          <div class="plannerranking__right">
+                            <p
+                              class="plannerranking-new__right-title plannerranking__right-title"
+                            >
+                              心に残る<br />
+                              ウェディングを
+                            </p>
+                            <div class="plannerranking__area-tagbox">
+                              <p
+                                class="plannerranking__area-tag reports-message__area-tag"
+                              >
+                                エリア
+                              </p>
+                              <p
+                                class="plannerranking-new__area plannerranking-new__area reports-message__area"
+                              >
+                                <span>東京</span>
+                                <span>神奈川</span>
+                                <span>千葉</span>
+                                <span>埼玉</span><br class="hidden-md" />
+                                <span>長野</span>
+                                <span>愛知</span><br class="hidden" />
+                                <span>岡山</span>
+                                <span>大阪</span><br class="hidden-md" />
+                                <span>広島</span>
+                                <span>福岡</span>
+                                <span>沖縄</span>
+                                <span>海外</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plannerranking-new__tag reports-message__tag">
+                          <span>＃国内</span>
+                          <span>＃海外</span>
+                          <span>＃レストラン</span><br />
+                          <span>＃海外</span>
+                          <span>＃リゾートウェディング</span><br />
+                          <span>＃海外</span>
+                          <span>＃アウトドア</span>
+                        </p>
+                        <div
+                          class="plannerranking-new__point plannerranking__point"
+                        >
+                          <div class="plannerranking__point-title">Point</div>
+                          <ul class="plannerranking__point-lists">
+                            <li class="plannerranking__point-list">
+                              オンライン相談OK
+                            </li>
+                            <li class="plannerranking__point-list">
+                              担当挙式数200組以上
+                            </li>
+                            <li class="plannerranking__point-list">
+                              アウトドアウェディングが得意
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slides -->
+                  <div class="plannerranking-new-slide swiper-slide">
+                    <div class="plannerranking-new__card reports-card">
+                      <div class="plannerranking__contents">
+                        <div class="plannerranking__content">
+                          <div class="plannerranking__left">
+                            <div class="plannerranking__image">
+                              <img src="./img/plannerranking2.jpg" alt="" />
+                              <div
+                                class="plannerranking-new__like plannerranking__like reports-card__like recent-box__like"
+                              >
+                                <img src="./img/Star.png" alt="" />
+                              </div>
+                            </div>
+                            <p
+                              class="plannerranking-new__name plannerranking__name"
+                            >
+                              鈴木 直子
+                            </p>
+                            <p class="plannerranking__companyname">
+                              株式会社mirage
+                            </p>
+                          </div>
+                          <div class="plannerranking__right">
+                            <p
+                              class="plannerranking__right-title plannerranking-new__right-title"
+                            >
+                              心に残る<br />
+                              ウェディングを
+                            </p>
+                            <div class="plannerranking__area-tagbox">
+                              <p
+                                class="plannerranking__area-tag reports-message__area-tag"
+                              >
+                                エリア
+                              </p>
+                              <p class="reports-message__area">
+                                <span>東京</span>
+                                <span>神奈川</span>
+                                <span>千葉</span>
+                                <span>埼玉</span><br class="hidden-md" />
+                                <span>長野</span>
+                                <span>愛知</span><br class="hidden" />
+                                <span>岡山</span>
+                                <span>大阪</span><br class="hidden-md" />
+                                <span>広島</span>
+                                <span>福岡</span>
+                                <span>沖縄</span>
+                                <span>海外</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plannerranking-new__tag reports-message__tag">
+                          <span>＃国内</span>
+                          <span>＃海外</span>
+                          <span>＃レストラン</span><br />
+                          <span>＃海外</span>
+                          <span>＃リゾートウェディング</span><br />
+                          <span>＃海外</span>
+                          <span>＃アウトドア</span>
+                        </p>
+                        <div
+                          class="plannerranking-new__point plannerranking__point"
+                        >
+                          <div class="plannerranking__point-title">Point</div>
+                          <ul class="plannerranking__point-lists">
+                            <li class="plannerranking__point-list">
+                              オンライン相談OK
+                            </li>
+                            <li class="plannerranking__point-list">
+                              担当挙式数200組以上
+                            </li>
+                            <li class="plannerranking__point-list">
+                              アウトドアウェディングが得意
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slides -->
+                  <div class="plannerranking-new-slide swiper-slide">
+                    <div class="plannerranking-new__card reports-card">
+                      <div class="plannerranking__contents">
+                        <div class="plannerranking__content">
+                          <div class="plannerranking__left">
+                            <div class="plannerranking__image">
+                              <img src="./img/plannerranking4.jpg" alt="" />
+                              <div
+                                class="plannerranking__like reports-card__like"
+                              >
+                                <img src="./img/Star.png" alt="" />
+                              </div>
+                            </div>
+                            <p
+                              class="plannerranking-new__name plannerranking__name"
+                            >
+                              水野 沙彩
+                            </p>
+                            <p class="plannerranking__companyname">
+                              marrywedding
+                            </p>
+                          </div>
+                          <div class="plannerranking__right">
+                            <p
+                              class="plannerranking-new__right-title plannerranking__right-title"
+                            >
+                              心に残る<br />
+                              ウェディングを
+                            </p>
+                            <div class="plannerranking__area-tagbox">
+                              <p
+                                class="plannerranking__area-tag reports-message__area-tag"
+                              >
+                                エリア
+                              </p>
+                              <p
+                                class="plannerranking-new__area reports-message__area"
+                              >
+                                <span>東京</span>
+                                <span>神奈川</span>
+                                <span>千葉</span>
+                                <span>埼玉</span><br class="hidden-md" />
+                                <span>長野</span>
+                                <span>愛知</span><br class="hidden" />
+                                <span>岡山</span>
+                                <span>大阪</span><br class="hidden-md" />
+                                <span>広島</span>
+                                <span>福岡</span>
+                                <span>沖縄</span>
+                                <span>海外</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plannerranking-new__tag reports-message__tag">
+                          <span>＃国内</span>
+                          <span>＃海外</span>
+                          <span>＃レストラン</span><br />
+                          <span>＃海外</span>
+                          <span>＃リゾートウェディング</span><br />
+                          <span>＃海外</span>
+                          <span>＃アウトドア</span>
+                        </p>
+                        <div
+                          class="plannerranking-new__point plannerranking__point"
+                        >
+                          <div class="plannerranking__point-title">Point</div>
+                          <ul class="plannerranking__point-lists">
+                            <li class="plannerranking__point-list">
+                              オンライン相談OK
+                            </li>
+                            <li class="plannerranking__point-list">
+                              担当挙式数200組以上
+                            </li>
+                            <li class="plannerranking__point-list">
+                              アウトドアウェディングが得意
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div
+                  id="js-plannerranking-new-prev"
+                  class="swiper-button-prev reports__swiper-prev plannerranking-new-prev"
+                ></div>
+                <div
+                  id="js-plannerranking-new-next"
+                  class="swiper-button-next reports__swiper-next plannerranking-new-next"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="plannerranking-new__button reports-news__button">
+            <button class="reports__btn button">プランナー一覧へ</button>
+          </div>
+        </div>
+      </section>
+      <section class="pickup">
+        <h2 class="pickup__head heading">
+          <span class="heading-en">Pick up Tags</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">キーワードからプランナーを探す</span>
+        </h2>
+        <div class="pickup__inner">
+          <div class="pickup__contents">
+            <div class="pickup__content pickup-content">
+              <p class="pickup-content__title">場所から</p>
+              <div
+                class="pickup-content__tag-box pickup-content__tag-box--first"
+              >
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃海外</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃軽井沢</span>
+                  <span class="pickup-content__tag">＃京都で和婚</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag"
+                    >＃沖縄リゾートウェディング</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="pickup__border"></div>
+            <div class="pickup__content pickup-content">
+              <p class="pickup-content__title">こだわりから</p>
+              <div
+                class="pickup-content__tag-box pickup-content__tag-box--second"
+              >
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃野外ウェディング</span>
+                  <span class="pickup-content__tag">＃ゲストハウス</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃自宅</span>
+                  <span class="pickup-content__tag"
+                    >＃アウトドアウェディング</span
+                  >
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃専門式場</span>
+                  <span class="pickup-content__tag">＃レストラン</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃ホテル</span>
+                  <span class="pickup-content__tag">＃ビーチウェディング</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag"
+                    >＃ペントハウスウェディング</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="pickup__border"></div>
+            <div class="pickup__content pickup-content">
+              <p class="pickup-content__title">形式から</p>
+              <div
+                class="pickup-content__tag-box pickup-content__tag-box--third"
+              >
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃挙式</span>
+                  <span class="pickup-content__tag">＃披露宴</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃２次会</span>
+                  <span class="pickup-content__tag">＃1.5次会</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃前撮り</span>
+                  <span class="pickup-content__tag">＃フォトウェディング</span>
+                </p>
+                <p class="pickup-content__row">
+                  <span class="pickup-content__tag">＃家族婚</span>
+                  <span class="pickup-content__tag">＃ハネムーン</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="voice">
+        <h2 class="voice__head heading">
+          <span class="heading-en">Voice</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">先輩花嫁からの口コミ</span>
+        </h2>
+        <div class="voice__inner">
+          <div class="voice__container">
+            <h3 class="voice__title title">
+              <span class="voice__title-en title-en">New voice</span>
+              <span class="title-ja">新着口コミ</span>
+            </h3>
+
+            <div class="voice__slider">
+              <!-- Slider main container -->
+              <div id="js-voice-swiper" class="voice-swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="voice-swiper-wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="voice-swiper-slide swiper-slide">
+                    <div class="voice__card">
+                      <div class="voice__content voice-content">
+                        <div class="voice__left">
+                          <img src="./img/voice1.jpg" alt="" />
+                        </div>
+                        <div class="voice__right">
+                          <p class="voice-content__title">
+                            最高のプランナーさんに<br
+                              class="hidden-md"
+                            />出会えました！
+                          </p>
+                          <div class="voice-content__satisfaction_level">
+                            <p class="voice-content-satisfaction_level__title">
+                              プランナー満足度
+                            </p>
+                            <div
+                              class="voice-content-satisfaction_level__stars"
+                            >
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star not-active"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <p
+                            class="voice-content__kind reports-message__kind hidden-md"
+                          >
+                            フォトウェディング
+                          </p>
+                          <div
+                            class="voice-content-satisfaction_level__message"
+                          >
+                            <p
+                              class="voice-content-satisfaction_level__text hidden-md"
+                            >
+                              口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります…
+                            </p>
+                            <p
+                              class="voice-content-satisfaction_level__text hidden"
+                            >
+                              口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。
+                            </p>
+                            <p
+                              class="voice-content-satisfaction_level__contributor"
+                            >
+                              <span
+                                class="voice-content-satisfaction_level__name"
+                                >ゆりゆり さん</span
+                              >
+                              <span class="voice-content-satisfaction_level_age"
+                                >28歳</span
+                              >
+                              <span class="voice-content-satisfaction_level_sex"
+                                >女性</span
+                              >
+                            </p>
+                          </div>
+                          <p
+                            class="voice-content__kind reports-message__kind hidden"
+                          >
+                            フォトウェディング
+                          </p>
+                        </div>
+                      </div>
+                      <div class="voice__planner-box">
+                        <div
+                          class="voice__planner reports__planner reports-planner"
+                        >
+                          <div
+                            class="voice-planner__image reports-planner__image"
+                          >
+                            <img src="./img/about4.png" alt="" />
+                          </div>
+                          <div
+                            class="voice-planner__content reports-planner__content"
+                          >
+                            <p
+                              class="reports-planner__role voice-planner__role"
+                            >
+                              担当プランナー
+                            </p>
+                            <p
+                              class="voice-planner__name reports-planner__name"
+                            >
+                              鈴木 咲
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="voice-planner__satisfaction-level voice-planner-new__satisfaction-level"
+                        >
+                          <div class="voice-planner__satisfaction-level-stars">
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 14 13"
+                              >
+                                <path
+                                  d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 14 13"
+                              >
+                                <path
+                                  d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 14 13"
+                              >
+                                <path
+                                  d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 14 13"
+                              >
+                                <path
+                                  d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="voice-planner__satisfaction-level-star not-active"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 14 13"
+                              >
+                                <path
+                                  d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="voice-planner__satisfaction-level-num">
+                            4.12
+                          </p>
+                          <p class="voice-planner__satisfaction-level-count">
+                            (20)
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        class="voice-planner__readmore reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Slides -->
+                  <div class="voice-swiper-slide swiper-slide">
+                    <div class="voice__card">
+                      <div class="voice__content voice-content">
+                        <div class="voice__left">
+                          <img src="./img/voice1.jpg" alt="" />
+                        </div>
+                        <div class="voice__right">
+                          <p class="voice-content__title">
+                            最高のプランナーさんに<br
+                              class="hidden-md"
+                            />出会えました！
+                          </p>
+                          <div class="voice-content__satisfaction_level">
+                            <p class="voice-content-satisfaction_level__title">
+                              プランナー満足度
+                            </p>
+                            <div
+                              class="voice-content-satisfaction_level__stars"
+                            >
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-content-satisfaction_level__star not-active"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 18 17"
+                                >
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <p
+                            class="voice-content__kind reports-message__kind hidden-md"
+                          >
+                            フォトウェディング
+                          </p>
+                          <div
+                            class="voice-content-satisfaction_level__message"
+                          >
+                            <p
+                              class="voice-content-satisfaction_level__text hidden-md"
+                            >
+                              口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります…
+                            </p>
+                            <p
+                              class="voice-content-satisfaction_level__text hidden"
+                            >
+                              口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。口コミの本文が入ります。
+                            </p>
+                            <p
+                              class="voice-content-satisfaction_level__contributor"
+                            >
+                              <span
+                                class="voice-content-satisfaction_level__name"
+                                >ゆりゆり さん</span
+                              >
+                              <span class="voice-content-satisfaction_level_age"
+                                >28歳</span
+                              >
+                              <span class="voice-content-satisfaction_level_sex"
+                                >女性</span
+                              >
+                            </p>
+                          </div>
+                          <p
+                            class="voice-content__kind reports-message__kind hidden"
+                          >
+                            フォトウェディング
+                          </p>
+                        </div>
+                      </div>
+                      <div class="voice__planner-box">
+                        <div
+                          class="voice__planner reports__planner reports-planner"
+                        >
+                          <div
+                            class="voice-planner__image reports-planner__image"
+                          >
+                            <img src="./img/about4.png" alt="" />
+                          </div>
+                          <div
+                            class="voice-planner__content reports-planner__content"
+                          >
+                            <p
+                              class="reports-planner__role voice-planner__role"
+                            >
+                              担当プランナー
+                            </p>
+                            <p class="reports-planner__name">鈴木 咲</p>
+                          </div>
+                        </div>
+                        <div
+                          class="voice-planner__satisfaction-level voice-planner-new__satisfaction-level"
+                        >
+                          <div class="voice-planner__satisfaction-level-stars">
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  class="voice-planner__satisfaction-level-star" d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div class="voice-planner__satisfaction-level-star">
+                              <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="voice-planner__satisfaction-level-star not-active"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="voice-planner__satisfaction-level-num">
+                            4.12
+                          </p>
+                          <p class="voice-planner__satisfaction-level-count">
+                            (20)
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        class="voice-planner__readmore reports-news-planner__readmore reports__readmore"
+                      >
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div
+                  id="js-voice-prev"
+                  class="swiper-button-prev reports__swiper-prev voice-prev"
+                ></div>
+                <div
+                  id="js-voice-next"
+                  class="swiper-button-next reports__swiper-next voice-next"
+                ></div>
+              </div>
+            </div>
+            <!-- プランナー満足度ランキング -->
+            <h3 class="voice__title title">
+              <span class="voice__title-en title-en">Ranking</span>
+              <span class="title-ja">プランナー満足度ランキング</span>
+            </h3>
+            <div class="voice-ranking__slider">
+              <!-- Slider main container -->
+              <div
+                id="js-voice-ranking-swiper"
+                class="voice-ranking__swiper swiper"
+              >
+                <!-- Additional required wrapper -->
+                <div class="voice-ranking__wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="voice-ranking-slide swiper-slide">
+                    <div class="voice-ranking__card">
+                      <p class="reports-card__ribbon voice-ranking__ribbon">
+                        No.<br /><span>01</span>
+                      </p>
+                      <div class="voice-ranking__content">
+                        <div class="voice-ranking__left">
+                          <img src="./img/voice_ranking1.png" alt="" />
+                        </div>
+                        <div class="voice-ranking__rigth">
+                          <p class="voice-ranking__companyname">
+                            株式会社P-Wedding
+                          </p>
+                          <p class="voice-ranking__name">佐藤 理恵</p>
+                          <div
+                            class="voice-planner__satisfaction-level voice-ranking__level"
+                          >
+                            <div
+                              class="voice-planner__satisfaction-level-stars voice-ranking__stars"
+                            >
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star not-active"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p
+                              class="voice-planner__satisfaction-level-num voice__num"
+                            >
+                              4.12
+                            </p>
+                            <p
+                              class="voice-planner__satisfaction-level-count voice__count"
+                            >
+                              (20)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="voice-ranking__message">
+                        <p class="voice-ranking-message__title">
+                          プランナーへの口コミ
+                        </p>
+                        <p class="voice-ranking-message__text">
+                          私らしい結婚式ができました！
+                        </p>
+                        <p class="voice-ranking-message__text2">
+                          打ち合わせから当日まで親身になってわたしたちの相談に乗ってくださいました。やりとりもとてもスム…
+                        </p>
+                      </div>
+                      <button class="voice-ranking__readmore reports__readmore">
+                        このプランナーページへ
+                      </button>
+                    </div>
+                  </div>
+                  <!-- slide -->
+                  <div class="voice-ranking-slide swiper-slide">
+                    <div class="voice-ranking__card">
+                      <p
+                        class="reports-card__ribbon reports-card__ribbon--second voice-ranking__ribbon"
+                      >
+                        No.<br /><span>02</span>
+                      </p>
+                      <div class="voice-ranking__content">
+                        <div class="voice-ranking__left">
+                          <img src="./img/voice_ranking2.png" alt="" />
+                        </div>
+                        <div class="voice-ranking__rigth">
+                          <p class="voice-ranking__companyname">
+                            株式会社P-Wedding
+                          </p>
+                          <p class="voice-ranking__name">加藤 美玲</p>
+                          <div
+                            class="voice-planner__satisfaction-level voice-ranking__level"
+                          >
+                            <div
+                              class="voice-planner__satisfaction-level-stars voice-ranking__stars"
+                            >
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star not-active"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p
+                              class="voice-planner__satisfaction-level-num voice__num"
+                            >
+                              4.12
+                            </p>
+                            <p
+                              class="voice-planner__satisfaction-level-count voice__count"
+                            >
+                              (20)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="voice-ranking__message">
+                        <p class="voice-ranking-message__title">
+                          プランナーへの口コミ
+                        </p>
+                        <p class="voice-ranking-message__text">
+                          私らしい結婚式ができました！
+                        </p>
+                        <p class="voice-ranking-message__text2">
+                          打ち合わせから当日まで親身になってわたしたちの相談に乗ってくださいました。やりとりもとてもスム…
+                        </p>
+                      </div>
+                      <button class="voice-ranking__readmore reports__readmore">
+                        このプランナーページへ
+                      </button>
+                    </div>
+                  </div>
+                  <div class="voice-ranking-slide swiper-slide">
+                    <div class="voice-ranking__card">
+                      <p
+                        class="reports-card__ribbon reports-card__ribbon--third voice-ranking__ribbon"
+                      >
+                        No.<br /><span>03</span>
+                      </p>
+                      <div class="voice-ranking__content">
+                        <div class="voice-ranking__left">
+                          <img src="./img/voice_ranking3.png" alt="" />
+                        </div>
+                        <div class="voice-ranking__rigth">
+                          <p class="voice-ranking__companyname">
+                            株式会社P-Wedding
+                          </p>
+                          <p class="voice-ranking__name">鈴木 直子</p>
+                          <div
+                            class="voice-planner__satisfaction-level voice-ranking__level"
+                          >
+                            <div
+                              class="voice-planner__satisfaction-level-stars voice-ranking__stars"
+                            >
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                              <div
+                                class="voice-planner__satisfaction-level-star voice-ranking__star not-active"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p
+                              class="voice-planner__satisfaction-level-num voice__num"
+                            >
+                              4.12
+                            </p>
+                            <p
+                              class="voice-planner__satisfaction-level-count voice__count"
+                            >
+                              (20)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="voice-ranking__message">
+                        <p class="voice-ranking-message__title">
+                          プランナーへの口コミ
+                        </p>
+                        <p class="voice-ranking-message__text">
+                          私らしい結婚式ができました！
+                        </p>
+                        <p class="voice-ranking-message__text2">
+                          打ち合わせから当日まで親身になってわたしたちの相談に乗ってくださいました。やりとりもとてもスム…
+                        </p>
+                      </div>
+                      <button class="voice-ranking__readmore reports__readmore">
+                        このプランナーページへ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="plannerranking-new__button reports-news__button voice-ranking__button"
+              >
+                <button class="voice-ranking__btn reports__btn button">
+                  口コミ一覧へ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- instagram -->
+      <section class="instagram">
+        <h2 class="instagram__head heading">
+          <span class="heading-en">Instagram</span>
+          <span class="heading-border"></span>
+          <span class="heading-ja">インスタグラム</span>
+        </h2>
+        <div class="instagram__inner">
+          <div class="instagram__flex">
+            <img src="./img/instagram (1).png" alt="" />
+            <img src="./img/instagram (2).png" alt="" />
+            <img src="./img/instagram (3).png" alt="" />
+            <img src="./img/instagram (4).png" alt="" />
+            <img src="./img/instagram (5).png" alt="" />
+            <img src="./img/instagram (6).png" alt="" />
+            <img src="./img/instagram (7).png" alt="" />
+            <img src="./img/instagram (8).png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__contents">
+        <div class="footer__content">
+          <div class="footer__left">
+            <a href="" class="">
+              <picture class="footer__logo">
+                <source
+                  media="(min-width: 805px)"
+                  srcset="./img/footerlogo.png"
+                />
+                <img src="./img/footer-logo-sp.png" alt="" /> </picture
+            ></a>
+            <div class="footer__sns">
+              <div class="footer__message">Follow Me</div>
+              <div class="footer__icons">
+                <a href="" class="footer__icon">
+                  <img src="./img/twitter.png" alt="" />
+                </a>
+                <a href="" class="footer__icon">
+                  <img src="./img/instagram.png" alt="" />
+                </a>
+                <a href="" class="footer__icon">
+                  <img src="./img/facebook.png" alt="" />
+                </a>
+                <a href="" class="footer__icon">
+                  <img src="./img/line.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__menu">
+              <a href="" class="footer-menu-text">プランナーを探す</a>
+              <a href="" class="footer-menu-text">シンデレラレポ</a>
+              <a href="" class="footer-menu-text">ログイン</a>
+              <a href="" class="footer-menu-text">お気に入りレポート</a>
+            </div>
+            <div class="footer__menu">
+              <a href="" class="footer-menu-text">初めてご利用される方へ</a>
+              <a href="" class="footer-menu-text">よくあるご質問</a>
+              <a href="" class="footer-menu-text">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__border"></div>
+        <div class="footer__nav">
+          <div class="footer__nav-text">運営会社</div>
+          <div class="footer__nav-text">プライバシーポリシー</div>
+          <div class="footer__nav-text">利用規約</div>
+        </div>
+      </div>
+      <div class="footer__box">
+        <p class="footer__copyright">©︎Best Planner All rights reserved.</p>
+        <p class="footer__text">
+          本サイト内は株式会社ウィザード様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
