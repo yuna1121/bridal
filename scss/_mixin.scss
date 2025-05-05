@@ -1,15 +1,50 @@
 @use "sass:map";
+@use "variable" as var;
 
 // ブレークポイントmixin
+// $breakpoints: (
+//   sm: "screen and (min-width:401px)",
+//   md: "screen and (min-width:805px)",
+//   lg: "screen and (min-width:1085px)",
+//   xl: "screen and (min-width:1233px)",
+// ) !default;
+
+// @mixin mq($breakpoint: md) {
+//   @media #{map-get($breakpoints,$breakpoint)} {
+//     @content;
+//   }
+// }
+
+//=====================================
+//    ブレイクポイント
+//=====================================
 $breakpoints: (
-  sm: "screen and (min-width:401px)",
-  md: "screen and (min-width:805px)",
-  lg: "screen and (min-width:1085px)",
-  xl: "screen and (min-width:1233px)",
+  //キー : 値
+  "sp": "screen and (max-width: #{var.$breakpoint - 1px})",
+  "md": "screen and (min-width: #{var.$breakpoint})",
+  "lg": "screen and (min-width:1085px)",
 ) !default;
 
 @mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints,$breakpoint)} {
+  @media #{map.get($breakpoints,$breakpoint)} {
     @content;
+  }
+}
+
+// =================================
+//  フォント情報の一括入力
+// =================================
+@mixin font($size: null, $weight: null, $height: null, $spacing: null) {
+  @if $size {
+    font-size: calc($size / 16 * 1rem);
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $height {
+    line-height: calc($height / $size);
+  }
+  @if $spacing {
+    letter-spacing: calc($spacing / $size * 1em);
   }
 }
