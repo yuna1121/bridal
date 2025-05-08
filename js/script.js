@@ -95,7 +95,7 @@ const cardSwiper = (selector, buttonPrev, buttonNext) => {
     // centeredSlides: true,
     768: {
       centeredSlides: true, // 中央寄せにする
-      // initialSlide: 2,
+      // initialSlide: 1,
       
     },
 
@@ -130,8 +130,35 @@ window.addEventListener('resize', () => {
   }
 })
 
-const cardSwiper3 = cardSwiper(".reports-news__swiper",  ".reports-news__swiper-prev", ".reports-news__swiper-next");
 
+
+const reportsNewsSwiper = new Swiper('.reports-news__swiper', { //swiperの名前
+  //切り替えのモーション
+  speed: 1000, //表示切り替えのスピード
+  effect: "slide", //切り替えのmotion (※1)
+  allowTouchMove: true, // スワイプで表示の切り替えを有効に
+
+  //最後→最初に戻るループ再生を有効に
+  loop: true,
+
+   //表示について
+  slidesPerView: "auto",
+  spaceBetween: 16,
+
+  //ナビゲーション
+  navigation: {
+    prevEl: ".reports-news__swiper-prev", //戻るボタンのclass
+    nextEl: ".reports-news__swiper-next", //進むボタンのclass
+  },
+
+
+  // ブレイクポイントによって変える
+  breakpoints: {
+    768: {
+      spaceBetween: 32,
+    },
+  },
+});
 
 
 
@@ -166,6 +193,7 @@ const swiper6 = new Swiper(".plannerranking__swiper", {
   breakpoints: {
     805: {
       spaceBetween: 24,
+
     },
   },
 
@@ -185,6 +213,7 @@ const swiper7 = new Swiper(".plannerranking-new-swiper", {
   spaceBetween: 16,
   breakpoints: {
     768: {
+      // slidesPerView:4,
       spaceBetween: 35,
     },
   },

@@ -1,0 +1,400 @@
+@use "color";
+@use "mixin";
+@use "variable" as var;
+@use "sass:math";
+
+$font-family-ja: "游ゴシック体", YuGothic, "游ゴシック Medium",
+  "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+$font-family-ja-t: "Tsukushi B Round Gothic", "筑紫B丸ゴシック";
+$font-family-num: "Avenir";
+
+//=====================================
+//    関数
+//=====================================
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
+}
+
+@function rem($px, $base: 16px) {
+  @return math.div(strip-unit($px), strip-unit($base)) * 1rem;
+}
+
+html {
+  @media screen and (max-width: #{var.$pc-inner-sum - 1px}) and (min-width: #{var.$breakpoint}) {
+    font-size: calc(16 / strip-unit(var.$pc-inner-sum) * 100vw);
+  }
+  @media screen and (max-width: #{var.$breakpoint - 1px}) {
+    // font-size: max(calc(16 / strip-unit($sp_camp) * 100vw), 16px);
+    font-size: calc(16 / strip-unit(var.$sp_camp) * 100vw);
+  }
+}
+
+//=====================================
+//   カード
+//=====================================
+.card {
+  padding: 21px 17px 23px 17px;
+  // width: 294px;
+  background: color.$color-l;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  align-items: start;
+  @include mixin.mq(md) {
+    // padding: 40px 40px 29px 51px;
+    padding: rem(20px) rem(21px) rem(30px) rem(20px);
+    // width: rem(348px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid color.$color-b;
+
+  }
+}
+
+.card__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // justify-content: space-between;
+
+  @include mixin.mq(md) {
+    gap: 0;
+    padding-bottom: 16px;
+    align-items: start;
+    // border-bottom: 1px solid color.$color-d;
+  }
+}
+
+.card__image {
+  width: 260px;
+  position: relative;
+  @include mixin.mq(md) {
+    width: rem(305px);
+    // height: 294px;
+    // object-fit: cover;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.card__like {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 25px;
+  width: 26px;
+  height: 26px;
+  background: rgba(117, 118, 118, 0.67);
+  // margin-block:auto;
+  display: grid;
+  place-content: center;
+  img {
+    width: 12.716px;
+    height: 11.392px;
+  }
+}
+
+// reports-message
+.card__message {
+  // width: inherit;
+  // margin-top: -32px;
+  margin-top: -42px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  width: 246px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  @include mixin.mq(md) {
+    margin-top: rem(10px);
+    width: rem(289px);
+    gap: rem(8px);
+    padding: 0;
+  }
+}
+
+.card__title {
+  color: color.$color-br;
+  font-family: $font-family-ja-t;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  @include mixin.mq(md) {
+    font-size: 18px;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.card__border {
+  width: 210px;
+  height: 0.5px;
+  background: color.$color-d;
+  @include mixin.mq(md) {
+    display: none;
+  }
+}
+.card__kind {
+  color: color.$color-l;
+  font-size: 10px;
+  font-weight: 500;
+  background: color.$tag-color-g;
+  width: 100%;
+  padding: 2px 8px;
+  text-align: center;
+  width: fit-content;
+}
+
+.card__kind--second {
+  background: color.$tag-color-p;
+}
+
+.card__kind--third {
+  background: color.$tag-color-o;
+}
+
+.card__flex {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+  @include mixin.mq(md) {
+    // gap: 8px;
+    gap: rem(10px);
+  }
+}
+
+.card__area-tag {
+  color: color.$color-b;
+  // @include mixin.font(10, 500, null, null);
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid color.$color-b;
+  padding: 3px;
+  // height: fit-content;
+  display: block;
+  @include mixin.mq(md) {
+    padding-inline: rem(8px);
+    width: calc(40px + 8px * 2);
+    text-align: center;
+  }
+}
+
+.card__area {
+  color: color.$color-br;
+  // @include mixin.font(12, 500, null, null);
+  font-size: 12px;
+  font-weight: 500;
+  @include mixin.mq(md) {
+    font-size: rem(14px);
+  }
+}
+
+.card__tag {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  @include mixin.mq(md) {
+    // margin-top: 24px;
+  }
+  span {
+    display: inline-block;
+    padding: 2px 6px 2px 4px;
+    border-radius: 45px;
+    background: color.$color-b;
+    color: color.$color-l;
+    // @include mixin.font(12, 500, null, null);
+    font-weight: 500;
+  }
+}
+
+// reports-planner
+.planner {
+  width: 255px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 16px;
+  position: relative;
+  background: color.$color-l;
+  @include mixin.mq(md) {
+    width: rem(295px);
+    margin-left: rem(15px);
+    align-items: center;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: color.$color-b;
+    top: -3.75px;
+    left: -7px;
+    @include mixin.mq(md) {
+      top: rem(-7px);
+      left: rem(-12px);
+    }
+  }
+}
+.planner__image {
+  width: 65px;
+  @include mixin.mq(md) {
+    width: rem(68px);
+  }
+}
+
+.planner__content {
+  width: 176px;
+  padding-block: 2.3px 2.3px;
+  position: relative;
+  text-align: left;
+  @include mixin.mq(md) {
+    width: rem(211px);
+
+    padding-block: 0;
+  }
+}
+
+.planner__role {
+  color: color.$color-d;
+  // @include mixin.font(10, 500, null, null);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.planner__name {
+  color: color.$color-br;
+  font-family: $font-family-ja-t;
+  font-size: 14px;
+
+  @include mixin.mq(md) {
+    font-size: rem(16px);
+  }
+}
+
+.planner__companyname {
+  color: color.$color-br;
+
+  // @include mixin.font(12, 500, null, null);
+  font-size: 12px;
+  font-weight: 500;
+  @include mixin.mq(md) {
+    // padding-bottom: 8px;
+  }
+}
+
+.card__readmore {
+  color: color.$color-d;
+  font-family: $font-family-num;
+  // @include mixin.font(16, 500, null, 1.6);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: calc(1.6px / 16px * 1em);
+  // text-align: right;
+  padding-bottom: 3px;
+  // display: flex;
+  position: relative;
+  display: block;
+  margin-top: 13px;
+  margin-left: auto;
+  margin-right: 43px;
+  text-align: right;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 135px;
+    height: 10px;
+    border-bottom: solid 1px color.$color-d;
+    border-right: solid 1px color.$color-d;
+    transform: skew(60deg);
+    bottom: 0;
+    left: -8px;
+    @include mixin.mq(md) {
+      bottom: rem(5px);
+    }
+  }
+}
+
+.ribbon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 13px;
+  width: 46px;
+  text-align: center;
+  z-index: 2;
+
+  color: color.$color-l;
+  text-align: center;
+  font-family: $font-family-ja-t;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 2px;
+  // @include mixin.mq(lg) {
+  //   left: 24px;
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 0;
+    width: 0;
+    border-left: 23px solid color.$ranking-color-g;
+    border-right: 23px solid color.$ranking-color-g;
+    border-bottom: 10px solid transparent;
+  }
+  span {
+    display: block;
+    margin-top: -3px;
+    color: color.$color-l;
+    font-family: $font-family-ja-t;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.ribbon--first {
+  background: color.$ranking-color-g;
+  &::after {
+    border-left: 23px solid color.$ranking-color-g;
+    border-right: 23px solid color.$ranking-color-g;
+  }
+}
+
+.ribbon--second {
+  background-color: color.$ranking-color-s;
+  &::after {
+    border-left: 23px solid color.$ranking-color-s;
+    border-right: 23px solid color.$ranking-color-s;
+  }
+}
+
+.ribbon--third {
+  background-color: color.$ranking-color-b;
+  &::after {
+    border-left: 23px solid color.$ranking-color-b;
+    border-right: 23px solid color.$ranking-color-b;
+  }
+}
