@@ -1062,6 +1062,18 @@ body {
     margin-left: rem(100px);
   }
 }
+.recent__head .heading-en {
+  @include mixin.mq(md) {
+    font-size: max(rem(30px),25px);
+  }
+}
+
+.recent__head .heading-ja {
+  @include mixin.mq(md) {
+    font-size: max(rem(20px),17px);
+  }
+}
+
 
 .recent__title {
   margin-top: 24px;
@@ -1347,9 +1359,7 @@ body {
   }
 }
 
-.recent2__swiper-container{
-
-
+.recent2__swiper-container {
 }
 .recent2__swiper {
 }

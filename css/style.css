@@ -1623,6 +1623,18 @@ body .is-fixed {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .recent__head .heading-en {
+    font-size: max(1.875rem, 25px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recent__head .heading-ja {
+    font-size: max(1.25rem, 17px);
+  }
+}
+
 .recent__title {
   margin-top: 24px;
 }
